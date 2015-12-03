@@ -1,0 +1,1 @@
+*/5 * * * * ubuntu /bin/bash -l -c "if [[ \$(ps aux | grep sync-state | grep -v grep) ]]; then exit; fi; cd orchestration-lib; ruby bin/sync-state.rb -j 10.0.2.70 -u user -a pass -c c04aa9eb-267b-4133-b891-e0d22b8c052a --pool 'pool 0'"
